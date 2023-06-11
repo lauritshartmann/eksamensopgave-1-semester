@@ -1,0 +1,310 @@
+/*
+FONTE
+----------
+H1 - Equinox
+text - Bodoni
+read text - arial 
+
+COLOR
+----------
+light green - #D2DDC5
+dark green - #969E8D
+black - #000
+white - #fff
+orange - #F0B15B
+gray - #F0E9DC
+------------------------*/
+
+/* GLOBAL
+-------------------*/
+
+html {
+  --primary: #000;
+  --secondary: #423b32;
+  --header: #fff;
+}
+
+@font-face {
+  font-family: "bodoni";
+  src: url(/1574087879938-bodoni-72-book-webfont.woff);
+}
+
+@font-face {
+  font-family: "hebrew";
+  src: url(/arial-hebrew-webfont.woff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #d3c2aa;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  flex-grow: 1;
+  margin: 0 auto 0 auto;
+}
+
+.p_midt {
+  margin: 3% 5% 5% 25%;
+  max-width: 65ch;
+  text-align: center;
+  padding-bottom: 4%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/*TEXT
+------*/
+
+h1 {
+  font-family: "bodoni", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+
+h2 {
+  font-family: "bodoni", sans-serif;
+  color: var(--secondary);
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: "bodoni", sans-serif;
+  font-size: 1rem;
+}
+
+p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+li {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+/*CLASSES
+---------*/
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.banner {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.banner h1:first-child {
+  color: var(--header);
+  font-size: 15cqw;
+  grid-row: 1;
+  grid-column: 1;
+  z-index: 10;
+  filter: drop-shadow(4px 2px 5px #00000069);
+}
+
+.banner img:last-child {
+  grid-row: 1;
+  grid-column: 1;
+}
+.banner a {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.logo {
+  display: flex;
+  margin: 1.2rem 0 0 2rem;
+  font-family: "bodoni", sans-serif;
+  align-items: baseline;
+  font-size: 2.5rem;
+  color: #000;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/*HEADER
+------------------------*/
+header {
+  background-color: #caaf93;
+  z-index: 100;
+  /*********
+  filter: drop-shadow(4px 2px 5px #00000069);
+  *********/
+}
+.header {
+  background-color: #d2ddc5;
+  z-index: 100;
+}
+.header_transparent {
+  background-color: #d2ddc55e; /* Transparent background color */
+}
+
+.flexheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  height: auto;
+  padding-bottom: 1rem;
+}
+
+/* NAVIGATION
+-------------*/
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  flex-grow: 1;
+}
+
+nav li {
+  padding: 0.6rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-family: "bodoni", sans-serif;
+  font-size: 1.2rem;
+}
+
+.bestiltid {
+  color: white;
+  background: #f0e9dc;
+  margin-right: 1rem;
+
+  transition: all 0.55s ease;
+
+  filter: drop-shadow(4px 2px 5px #00000069);
+}
+
+nav li:hover {
+  transform: scale(1.1);
+}
+
+.active {
+  border-bottom: 2px solid #f0b15b;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+/* FOOTER
+-------------*/
+
+footer {
+  display: flex;
+  background-color: #d3c2aa;
+  padding: 2rem 0px 1rem 0;
+  justify-content: center;
+  gap: 20%;
+  flex-grow: 1;
+}
+
+.contentfooter {
+  margin: 0 0 1rem 1rem;
+}
+
+.contentfooter h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.contentfooter p {
+  margin-bottom: 0.2rem;
+}
+
+footer img {
+  margin-top: 0.5rem;
+  aspect-ratio: 1/1;
+  width: 30px;
+}
+
+footer div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.link_tekst {
+  color: #000;
+}
+
+@media (max-width: 700px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .toggle-btn {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  #burgerlogo {
+    background-color: transparent;
+    aspect-ratio: 1/1;
+    width: 100%;
+  }
+
+  nav {
+    height: 2rem;
+    text-align: -moz-right;
+    text-align: -webkit-right;
+  }
+
+  nav ul {
+    display: none;
+    gap: 1rem;
+  }
+
+  nav.shown ul {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    background-color: #9c98805e;
+  }
+
+  .bestiltid {
+    margin: 0;
+    filter: none;
+  }
+
+  button {
+    border: none;
+  }
+}
