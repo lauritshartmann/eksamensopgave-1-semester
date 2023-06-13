@@ -146,6 +146,9 @@ li {
   text-decoration: none;
   transform: translateY(-2px);
 }
+.logo img {
+  height: 60px;
+}
 
 /*HEADER
 ------------------------*/
